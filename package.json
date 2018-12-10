@@ -6,6 +6,7 @@
   "module": "dist/polyglot.esm.js",
   "scripts": {
     "build": "npm-run-all -p build:*",
+    "build:umd": "rollup -c rollup.config.js index.js --file dist/polyglot.umd.js --format umd -n polyglot",
     "build:cjs": "rollup -c rollup.config.js index.js --file dist/polyglot.cjs.js --format cjs",
     "build:esm": "rollup -c rollup.config.js index.js --file dist/polyglot.esm.js --format esm",
     "build:docs": "docco -o docs/ index.js",
